@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import emailjs from "node_modules/emailjs-com";
+import Swal from "sweetalert2";
 
 export default function Form() {
   // ! These API keys are meant to be public while using the EmailJs services and it's endpoints.
@@ -27,7 +29,7 @@ export default function Form() {
         animate="show"
         variants={container}
         onSubmit={handleOnSubmit}
-        className="gap-5 flex flex-col items-center overflow-hidden"
+        className="flex flex-col items-center gap-5 overflow-hidden"
       >
         <div className="overflow-hidden">
           <motion.input
@@ -58,13 +60,13 @@ export default function Form() {
             label="Message"
             required
             placeholder="Message"
-            className="py-1 px-2"
+            className="px-2 py-1"
           />
         </div>
         <motion.button
           whileTap={{ scale: 0.8 }}
           variants={submitBtn}
-          className="uppercase mt-6 bg-rose-300 py-3 px-6 rounded-lg"
+          className="px-6 py-3 mt-6 uppercase rounded-lg bg-rose-300"
           type="submit"
         >
           Send
