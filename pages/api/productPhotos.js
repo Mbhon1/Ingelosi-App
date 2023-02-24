@@ -25,9 +25,9 @@ export default [
     imgLink: "https://flowbite.com/docs/images/carousel/carousel-5.svg",
     alt: "img3",
   },
-  // {
-  //   id: 6,
-  //   imgLink: require("public/me.jpeg"),
-  //   alt: "qaqi",
-  // },
+  {
+    id: 6,
+    imgLink: require("public/me.jpeg"),
+    alt: "qaqi",
+  },
 ];

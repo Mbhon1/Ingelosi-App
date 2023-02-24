@@ -1,43 +1,42 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "@/layouts/layout";
-// import Hero from "@/components/Hero";
-import { Lobster_Two } from "@next/font/google";
+import Hero from "@/components/Hero";
 import { motion } from "framer-motion";
-import MyCarousel from "@/components/MyCarousel";
+import MyNavbar from "@/components/MyNavbar";
+import Service from "@/components/Service";
+import Contact from "@/components/Contact";
+import Sidebar from "@/components/Sidebar";
+import { useState } from "react";
 
-const lobsterTwo = Lobster_Two({
-  weight: ["700", "700"],
-  subsets: ["latin"],
-});
+const name = "Nailed By Ingelosi is a salon that offers menicure and pedicure.";
+const siteTitle = "Ingelosi";
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function toggleSidebar() {
+    setIsOpen(!isOpen);
+  }
+
   return (
-    <Layout>
+    <>
       <Head>
+        <meta name="description" content={name} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
         <title>{siteTitle}</title>
       </Head>
-      {/* <Hero /> */}
-      <motion.div
-        initial={{ y: "100%" }}
-        animate={{ y: "0%" }}
-        transition={{ duration: 0.95, ease: "easeOut" }}
-        exit={{ opacity: 1 }}
-        className="absolute top-0 left-0 w-full h-full px-12 pt-20 text-gray-900 bg-orange-300 lg:px-48"
-      >
-        <div className="p-1 overflow-hidden lg:my-80">
-          <motion.h1
-            animate={{ y: 0 }}
-            initial={{ y: "100%" }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            className={`${lobsterTwo} text-6xl text-center lg:text-left lg:text-9xl`}
-          >
-            Nailed By Ingelosi
-          </motion.h1>
-        </div>
-        <div>
-          <MyCarousel />
-        </div>
-      </motion.div>
-    </Layout>
+
+      <MyNavbar toggleSidebar={toggleSidebar} />
+
+      <main>
+        <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+        <Hero
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta expedita blanditiis est explicabo voluptate inventore quaerat harum laudantium doloribus itaque!"
+          title="Nailed By Ingelosi"
+        />
+        <Service />
+        <Contact />
+      </main>
+    </>
   );
 }
