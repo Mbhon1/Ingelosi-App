@@ -21,7 +21,7 @@ const About = (props) => {
         </div>
 
         <div>
-          <h2 className="text-2xl pb-5 flex items-center">
+          <h2 className="text-2xl pb-5 flex items-center px-4">
             <BsClock className="mr-5" />
             Hours
           </h2>
