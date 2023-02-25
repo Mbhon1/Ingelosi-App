@@ -21,11 +21,11 @@ const About = (props) => {
         </div>
 
         <div>
-          <h2 className="text-2xl pb-5 flex items-center px-4">
+          <h2 className="text-2xl pb-5 flex items-center">
             <BsClock className="mr-5" />
             Hours
           </h2>
-          <div className="flex items-center justify-between w-[400px]">
+          <div className="flex items-center justify-between w-[400px] px-4">
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-4 font-medium">
                 {/* <AiOutlineGift className="text-emerald-700 text-[22px]" /> */}
