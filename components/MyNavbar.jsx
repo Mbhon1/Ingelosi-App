@@ -28,6 +28,16 @@ export default function MyNavbar(props) {
             smooth={true}
             offset={-0}
             duration={500}
+            to="about"
+            className="hover:text-emerald-700 cursor-pointer"
+          >
+            About
+          </Link>
+          <Link
+            spy={true}
+            smooth={true}
+            offset={-0}
+            duration={500}
             to="service"
             className="hover:text-emerald-700 cursor-pointer"
           >

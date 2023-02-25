@@ -1,18 +1,14 @@
-import Layout from "@/layouts/layout";
-import { Footer } from "flowbite-react";
+import { CgCopyright } from "react-icons/cg";
 
-export default function MyFooter() {
+export default function MyFooter(props) {
   return (
-    <div className="fixed bottom-0 left-0 w-full px-5 pb-8">
-      <Footer container={true}>
-        <Footer.Copyright href="#" by=" Ingelosi™" year={2023} />
-        <Footer.LinkGroup className="justify-between">
-          <Footer.Link href="/about">About</Footer.Link>
-          <Footer.Link href="#">Privacy Policy</Footer.Link>
-          <Footer.Link href="#">Licensing</Footer.Link>
-          <Footer.Link href="/contact">Contact</Footer.Link>
-        </Footer.LinkGroup>
-      </Footer>
+    <div className="bg-[url(/footer.jpeg)] bg-cover bg-center h-[100px]  text-white grid place-items-center">
+      <div className="text-center text-xl backdrop-blur-md backdrop-brightness-50">
+        <p>Maintained by Mbhoni</p>
+        <p className="flex items-center">
+          <CgCopyright className="mr-1" /> {props.date} {props.rights}
+        </p>
+      </div>
     </div>
   );
 }

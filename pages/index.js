@@ -6,6 +6,7 @@ import Service from "@/components/Service";
 import Contact from "@/components/Contact";
 import Sidebar from "@/components/Sidebar";
 import { useState } from "react";
+import About from "@/components/About";
 
 const name = "Nailed By Ingelosi is a salon that offers menicure and pedicure.";
 const siteTitle = "Ingelosi";
@@ -34,6 +35,7 @@ export default function Home() {
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta expedita blanditiis est explicabo voluptate inventore quaerat harum laudantium doloribus itaque!"
           title="Nailed By Ingelosi"
         />
+        <About />
         <Service />
         <Contact />
       </main>

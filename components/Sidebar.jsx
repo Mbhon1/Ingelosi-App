@@ -27,6 +27,16 @@ const Sidebar = (props) => {
           Home
         </Link>
         <Link
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={-0}
+          duration={500}
+          className="hover:text-emerald-700"
+        >
+          About
+        </Link>
+        <Link
           to="service"
           spy={true}
           smooth={true}
