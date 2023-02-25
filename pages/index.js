@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Hero from "@/components/Hero";
-import { motion } from "framer-motion";
 import MyNavbar from "@/components/MyNavbar";
 import Service from "@/components/Service";
 import Contact from "@/components/Contact";

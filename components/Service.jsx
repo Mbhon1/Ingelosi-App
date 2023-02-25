@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import offers from "@/pages/api/offers";
 import Headings from "./Headings";
 import Image from "next/image";

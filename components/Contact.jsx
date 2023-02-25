@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Headings from "./Headings";
 
 const letsTalk = "Let's Talk";
