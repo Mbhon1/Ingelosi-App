@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
 import React from "react";
 import { Lobster_Two } from "@next/font/google";
 import TypeWriter from "typewriter-effect";
+import { Link } from "react-scroll";
 
 const lobsterTwo = Lobster_Two({
   weight: ["400", "700"],
@@ -16,12 +16,15 @@ const Hero = (props) => {
         className="bg-[url(/hero.jpg)] flex items-center h-screen bg-fixed bg-center bg-cover "
       >
         <div className="container flex items-center h-screen bg-fixed bg-center bg-cover  px-4 mx-auto">
-          <div className="max-w-[450ox] text-black flex flex-col gap-[40px]">
+          <div className="max-w-[450ox] text-white flex flex-col gap-[40px]">
             <div>
-              <h1 className={`text-7xl ${lobsterTwo.className}`}>
+              <h1
+                className={`text-7xl pt-10 transition duration-500 pb-8 ${lobsterTwo.className}`}
+              >
                 {props.title}
               </h1>
-              <h4 className="mt-3 text-2xl text-white">
+              <div className="bg-[#ff4d41] h-[2px] w-[40px]"></div>
+              <h4 className="mt-10 text-5xl text-white">
                 <TypeWriter
                   onInit={(typewriter) => {
                     typewriter
@@ -44,34 +47,17 @@ const Hero = (props) => {
                 />
               </h4>
             </div>
-            <div className="bg-[#ff4d41] h-[2px] w-[40px]"></div>
+
             <div>
-              <p className="text-white">{props.description}</p>
-              {/* <Button link="https://github.com/Mbhon1" text="Learn More" /> */}
+              <Link to="contact">
+                <button className="btn animate-pulse transition duration-700 uppercase">
+                  Book Now!
+                </button>
+              </Link>
             </div>
           </div>
         </div>
       </div>
-
-      {/* <motion.div
-        initial={{ y: "100%" }}
-        animate={{ y: "0%" }}
-        transition={{ duration: 0.95, ease: "easeOut" }}
-        exit={{ opacity: 1 }}
-        className="absolute top-0 left-0 w-screen h-screen px-12 pt-20 text-gray-900 bg-orange-300 lg:px-48"
-      >
-        <div className="p-5 overflow-hidden lg:my-80">
-          <motion.h1
-            animate={{ y: 0 }}
-            initial={{ y: "100%" }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            className={`${lobsterTwo.className} text-6xl text-center lg:text-left lg:text-9xl`}
-          >
-            Nailed By Ingelosi
-          </motion.h1>
-        </div>
-        <div></div>
-      </motion.div> */}
     </>
   );
 };
