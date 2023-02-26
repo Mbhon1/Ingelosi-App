@@ -5,11 +5,16 @@ import Image from "next/image";
 export default function Service(props) {
   const ourOffers = offers.map((offer) => {
     return (
-      <div key={offer.id} className="flex flex-col gap-2">
-        <Image alt="nails" src={offer.img} className="w-[50%]" />
+      <div
+        key={offer.id}
+        className="flex flex-col gap-2 shadow-xl items-center max-w-[250px] dark:bg-slate-500"
+      >
+        <Image alt="nails" src={offer.img} className="w-[100%]" />
         <h2 className="text-xl">{offer.title}</h2>
-        <p className="text-sm">{offer.desc}</p>
-        <span className="text-xs text-teal-600">{offer.price}</span>
+        <span className="text-xs text-teal-600 dark:text-slate-800">
+          {offer.price}
+        </span>
+        <p className="px-4 py-3 text-sm">{offer.desc}</p>
       </div>
     );
   });

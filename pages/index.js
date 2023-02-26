@@ -29,7 +29,7 @@ export default function Home() {
 
       <MyNavbar toggleSidebar={toggleSidebar} />
 
-      <main>
+      <main className="dark:bg-slate-800 dark:text-white">
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
         <Hero
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta expedita blanditiis est explicabo voluptate inventore quaerat harum laudantium doloribus itaque!"

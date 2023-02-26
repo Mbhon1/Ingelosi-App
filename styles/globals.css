@@ -10,10 +10,10 @@ body {
 
 @layer components {
   .btn {
-    @apply inline-block px-4 py-2 mt-10 font-medium text-white transition duration-200 border rounded bg-emerald-700 border-emerald-700 hover:bg-transparent hover:text-emerald-700;
+    @apply inline-block bg-indigo-400 rounded-[15px] shadow-[9px] hover:bg-indigo-500 active:bg-indigo-500 active:shadow-[5px] active:translate-y-[4px]  px-4 py-2 mt-10 font-medium;
   }
 
   .inputStyle {
-    @apply outline-emerald-700 border-gray-400 border rounded-[5px] px-4 py-2 w-[100%];
+    @apply outline-cyan-700 dark:bg-slate-800 border-gray-400 border rounded-[5px] px-4 py-2 w-[100%];
   }
 }

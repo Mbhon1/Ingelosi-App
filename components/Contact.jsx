@@ -23,45 +23,43 @@ export default function Contact() {
   }
 
   return (
-    <>
-      <section id="contact" className="container px-4 mx-auto pb-10">
-        <Headings title="Contact Us" />
+    <section id="contact" className="container px-4 py-10 mx-auto">
+      <Headings title="Contact Us" />
 
-        <form onSubmit={handleOnSubmit} className="flex flex-col gap-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <input
-              name="from_name"
-              placeholder="Name"
-              className="inputStyle"
-              required
-            />
-            <input
-              name="from_email"
-              placeholder="Email"
-              className="inputStyle"
-              required
-            />
-          </div>
+      <form onSubmit={handleOnSubmit} className="flex flex-col gap-8">
+        <div className="grid grid-cols-1 gap-8 caret-red-600 md:grid-cols-2">
           <input
-            name="from_subject"
-            placeholder="Subject"
+            name="from_name"
+            placeholder="Name"
             className="inputStyle"
             required
           />
-          <textarea
-            name="message"
+          <input
+            name="from_email"
+            placeholder="Email"
             className="inputStyle"
-            placeholder="Message"
-            rows="6"
             required
           />
-          <div>
-            <button type="submit" className="btn">
-              Send Message
-            </button>
-          </div>
-        </form>
-      </section>
-    </>
+        </div>
+        <input
+          name="from_subject"
+          placeholder="Subject"
+          className="inputStyle caret-red-600"
+          required
+        />
+        <textarea
+          name="message"
+          className="inputStyle caret-red-600"
+          placeholder="Message"
+          rows="6"
+          required
+        />
+        <div>
+          <button type="submit" className="btn">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </section>
   );
 }

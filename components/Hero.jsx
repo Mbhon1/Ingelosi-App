@@ -15,7 +15,7 @@ const Hero = (props) => {
         id="hero"
         className="bg-[url(/hero.jpg)] flex items-center h-screen bg-fixed bg-center bg-cover "
       >
-        <div className="container flex items-center h-screen bg-fixed bg-center bg-cover  px-4 mx-auto">
+        <div className="container flex items-center h-screen px-4 mx-auto bg-fixed bg-center bg-cover">
           <div className="max-w-[450ox] text-white flex flex-col gap-[40px]">
             <div>
               <h1
@@ -23,7 +23,7 @@ const Hero = (props) => {
               >
                 {props.title}
               </h1>
-              <div className="bg-[#ff4d41] h-[2px] w-[40px]"></div>
+              <div className="bg-[#41ffd6] h-[2px] w-[40px]"></div>
               <h4 className="mt-10 text-5xl text-white">
                 <TypeWriter
                   onInit={(typewriter) => {
@@ -50,8 +50,8 @@ const Hero = (props) => {
 
             <div>
               <Link to="contact">
-                <button className="btn animate-pulse transition duration-700 uppercase">
-                  Book Now!
+                <button className="uppercase">
+                  <span className="transition duration-700 btn">Book Now!</span>
                 </button>
               </Link>
             </div>

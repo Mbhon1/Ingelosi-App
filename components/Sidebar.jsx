@@ -1,13 +1,19 @@
 import React from "react";
 import { RiCloseFill } from "react-icons/ri";
 import { Link } from "react-scroll";
+import { Inter } from "@next/font/google";
+
+const inter = Inter({
+  weight: ["700", "700"],
+  subsets: ["latin"],
+});
 
 const Sidebar = (props) => {
   return (
     <div
-      className={`w-screen h-screen ${
-        props.isOpen ? "fixed" : "hidden"
-      } bg-gray-800 z-20 text-white grid place-items-center`}
+      className={`w-screen h-screen ${props.isOpen ? "fixed" : "hidden"} ${
+        inter.className
+      } dark:bg-gray-800 z-20 text-black dark:text-white grid place-items-center`}
     >
       <div
         className="absolute top-0 right-0 mr-[30px] mt-[10px] hover:cursor-pointer"

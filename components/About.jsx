@@ -1,61 +1,53 @@
 import React from "react";
 import Headings from "./Headings";
-import { GrMapLocation } from "react-icons/gr";
 import { BsClock } from "react-icons/bs";
+import { IoLocationOutline } from "react-icons/io5";
+import { GiClick } from "react-icons/gi";
 
 const About = (props) => {
   return (
     <section id="about" className="container px-4 py-10 mx-auto">
       <Headings title="About Us" />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px]">
+      <div className="grid tracking-tight grid-cols-1 md:grid-cols-2 gap-[60px]">
         <div className="">
           <div>
             <p>{props.desc}</p>
           </div>
-          <h2 className="text-2xl pt-9 pb-4 flex items-center">
-            <GrMapLocation className="mr-5" />
+          <h2 className="flex items-center pb-4 text-xl font-bold pt-9">
+            <IoLocationOutline className="mr-5 text-2xl" />
             Location
           </h2>
-          <p>{props.street}</p>
-          <p>{props.city}</p>
+          <a href="https://googlemaps.com" className="hover:underline">
+            <p>{props.street}</p>
+            <p>{props.city}</p>
+          </a>
         </div>
 
         <div>
-          <h2 className="text-2xl pb-5 flex items-center">
-            <BsClock className="mr-5" />
+          <h2 className="flex items-center pb-5 text-xl font-bold">
+            <BsClock className="mr-5 text-2xl" />
             Hours
           </h2>
-          <div className="flex items-center justify-between w-[400px] px-4">
+          <div className="flex items-center justify-between w-[350px]">
             <div className="flex flex-col gap-6">
+              <div className="flex items-center gap-4 font-medium">Monday</div>
+              <div className="flex items-center gap-4 font-medium">Tuesday</div>
               <div className="flex items-center gap-4 font-medium">
-                {/* <AiOutlineGift className="text-emerald-700 text-[22px]" /> */}
-                Monday
-              </div>
-              <div className="flex items-center gap-4 font-medium">
-                {/* <FiBookOpen className="text-emerald-700 text-[22px]" /> */}
-                Tuesday
-              </div>
-              <div className="flex items-center gap-4 font-medium">
-                {/* <BsGlobe2 className="text-emerald-700 text-[22px]" /> */}
                 Wednesday
               </div>
               <div className="flex items-center gap-4 font-medium">
-                {/* <TbPacman className="text-emerald-700 text-[22px]" /> */}
                 Thursday
               </div>
-              <div className="flex items-center gap-4 font-medium">
-                {/* <IoLocationOutline className="text-emerald-700 text-[22px]" /> */}
-                Friday
-              </div>
+              <div className="flex items-center gap-4 font-medium">Friday</div>
             </div>
-            <div className="flex flex-col gap-6 text-gray-600">
+            <div className="flex dark:text-[#9D867D] flex-col gap-6 text-gray-600">
               <div>:</div>
               <div>:</div>
               <div>:</div>
               <div>:</div>
               <div>:</div>
             </div>
-            <div className="flex flex-col gap-6 text-gray-600">
+            <div className="flex flex-col dark:text-[#9D867D] gap-6 text-gray-600">
               <div>10am - 6pm</div>
               <div>10am - 6pm</div>
               <div>10am - 6pm</div>
@@ -64,12 +56,8 @@ const About = (props) => {
             </div>
           </div>
           <div className="max-w-[800px]">
-            <h2 className="font-bold mt-16 mb-10">{props.title}</h2>
+            <h2 className="mt-16 mb-10 font-bold">{props.title}</h2>
             <p className="text-gray-600"> {props.description}</p>
-            {/* <Button
-              link="https://mbhoniprofilecard.netlify.app/"
-              text="Hire Me"
-            /> */}
           </div>
         </div>
       </div>

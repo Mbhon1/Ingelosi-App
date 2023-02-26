@@ -1,17 +1,17 @@
-import { Inter } from "@next/font/google";
+import { Inter, Lobster } from "@next/font/google";
 import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 
-const inter = Inter({
-  weight: ["700", "700"],
-  subsets: ["latin"],
+const lobster = Lobster({
+  weight: ["400", "400"],
+  subsets: ["cyrillic"],
 });
 
 export default function MyNavbar(props) {
   return (
-    <div className="bg-white fixed top-0 w-[100%] z-10">
+    <div className="bg-white fixed top-0 w-[100%] z-10 dark:bg-slate-800 dark:text-white">
       <div className="container flex items-center justify-between px-4 py-4 mx-auto">
-        <div className="text-[24px]">Ingelosi</div>
+        <div className={`text-[24px] ${lobster.className}`}>Ingelosi</div>
         <div className="hidden gap-6 md:flex">
           <Link
             to="hero"
@@ -19,7 +19,7 @@ export default function MyNavbar(props) {
             smooth={true}
             offset={-150}
             duration={500}
-            className="hover:text-emerald-700 cursor-pointer"
+            className="cursor-pointer hover:text-emerald-700"
           >
             Home
           </Link>
@@ -29,7 +29,7 @@ export default function MyNavbar(props) {
             offset={-0}
             duration={500}
             to="about"
-            className="hover:text-emerald-700 cursor-pointer"
+            className="cursor-pointer hover:text-emerald-700"
           >
             About
           </Link>
@@ -39,7 +39,7 @@ export default function MyNavbar(props) {
             offset={-0}
             duration={500}
             to="service"
-            className="hover:text-emerald-700 cursor-pointer"
+            className="cursor-pointer hover:text-emerald-700"
           >
             Services
           </Link>
@@ -49,7 +49,7 @@ export default function MyNavbar(props) {
             offset={-0}
             duration={500}
             to="contact"
-            className="hover:text-emerald-700 cursor-pointer"
+            className="cursor-pointer hover:text-emerald-700"
           >
             Contact
           </Link>
