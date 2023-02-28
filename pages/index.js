@@ -4,19 +4,15 @@ import MyNavbar from "@/components/MyNavbar";
 import Service from "@/components/Service";
 import Contact from "@/components/Contact";
 import Sidebar from "@/components/Sidebar";
-import { useState } from "react";
 import About from "@/components/About";
 import MyFooter from "@/components/MyFooter";
+import { useCycle } from "framer-motion";
 
 const name = "Nailed By Ingelosi is a salon that offers menicure and pedicure.";
 const siteTitle = "Ingelosi";
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  function toggleSidebar() {
-    setIsOpen(!isOpen);
-  }
+  const [isOpen, cycleIsOpen] = useCycle(false, true);
 
   return (
     <>
@@ -27,12 +23,12 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
 
-      <MyNavbar toggleSidebar={toggleSidebar} />
+      <MyNavbar toggleSidebar={cycleIsOpen} isOpen={isOpen} />
 
       <main className="dark:bg-slate-800 dark:text-white">
-        <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+        <Sidebar isOpen={isOpen} toggleSidebar={cycleIsOpen} />
         <Hero
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta expedita blanditiis est explicabo voluptate inventore quaerat harum laudantium doloribus itaque!"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
           title="Nailed By Ingelosi"
         />
         <About

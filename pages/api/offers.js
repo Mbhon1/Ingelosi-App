@@ -23,7 +23,7 @@ export default [
   },
   {
     id: 4,
-    title: "Children Manicure",
+    title: "Child Manicure",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     price: "R160",
     img: require("public/nail4.jpg"),

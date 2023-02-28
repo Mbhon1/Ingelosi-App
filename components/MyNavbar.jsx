@@ -1,10 +1,9 @@
-import { Inter, Lobster } from "@next/font/google";
+import { Lobster } from "@next/font/google";
 import { Link } from "react-scroll";
-import { FiMenu } from "react-icons/fi";
 
 const lobster = Lobster({
   weight: ["400", "400"],
-  subsets: ["cyrillic"],
+  subsets: ["latin"],
 });
 
 export default function MyNavbar(props) {
@@ -54,8 +53,13 @@ export default function MyNavbar(props) {
             Contact
           </Link>
         </div>
-        <div onClick={props.toggleSidebar} className="md:hidden text-[24px]">
-          <FiMenu />
+        <div className="md:hidden">
+          <button
+            onClick={props.toggleSidebar}
+            className="inline-block bg-indigo-400 rounded-[15px] shadow-md hover:bg-indigo-500 active:bg-indigo-500 active:shadow-lg active:translate-y-[4px]  px-4 py-1 font-semibold  uppercase"
+          >
+            {props.isOpen ? "Close" : "Open"}
+          </button>
         </div>
       </div>
     </div>

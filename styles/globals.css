@@ -10,7 +10,7 @@ body {
 
 @layer components {
   .btn {
-    @apply inline-block bg-indigo-400 rounded-[15px] shadow-[9px] hover:bg-indigo-500 active:bg-indigo-500 active:shadow-[5px] active:translate-y-[4px]  px-4 py-2 mt-10 font-medium;
+    @apply inline-block bg-indigo-400 rounded-[15px] shadow-md hover:bg-indigo-500 active:bg-indigo-500 active:shadow-lg active:translate-y-[4px]  px-4 py-2 mt-10 font-medium;
   }
 
   .inputStyle {
